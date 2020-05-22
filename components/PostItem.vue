@@ -17,32 +17,34 @@
 </template>
 
 <script>
-import moment from 'moment';
+import moment from "moment";
 
 export default {
   props: {
     title: {
       type: String,
-      required: true,
+      required: true
     },
     subtitle: {
       type: String,
-      required: false,
+      required: false
     },
     date: {
-      type: Date,
+      type: Number,
       required: false,
-      default: () => new Date(),
+      default: () => new Date()
     },
     author: {
       type: String,
       required: false,
+      default: "Unknown"
     },
     isRead: {
       type: Boolean,
-      required: true,
-    },
-  },
+      required: false,
+      default: false
+    }
+  }
 };
 </script>
 

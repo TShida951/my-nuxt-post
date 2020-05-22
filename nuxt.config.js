@@ -29,19 +29,23 @@ module.exports = {
    */
   plugins: [{ src: '@/plugins/filters.js' }],
   /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: [],
-  /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
+    // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
+    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/axios',
   ],
+  /*
+   ** Axios module configuration
+   ** See https://axios.nuxtjs.org/options
+   */
+  axios: {},
   /*
    ** Build configuration
    */
+  serverMiddleware: ['@/server/routes/index'],
   build: {
     postcss: {
       preset: {

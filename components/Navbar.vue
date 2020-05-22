@@ -27,23 +27,14 @@
         class="navbar-menu"
       >
         <div class="navbar-end">
-          <div
-            :class="{ 'is-active': isActive }"
-            class="navbar-item has-dropdown"
-          >
-            <a class="navbar-link">
-              Menu
-            </a>
+          <div :class="{ 'is-active': isActive }" class="navbar-item has-dropdown">
+            <a class="navbar-link">Menu</a>
             <div class="navbar-dropdown">
-              <nuxt-link to="/" class="navbar-item">
-                Home
-              </nuxt-link>
+              <nuxt-link to="/" class="navbar-item">Home</nuxt-link>
               <!-- <div @click="navigateTo('/manage')" class="navbar-item">
                 Manage
-              </div> -->
-              <nuxt-link to="/manage" class="navbar-item">
-                Manage
-              </nuxt-link>
+              </div>-->
+              <nuxt-link to="/manage" class="navbar-item">Manage</nuxt-link>
             </div>
           </div>
         </div>
@@ -56,7 +47,7 @@
 export default {
   data() {
     return {
-      isActive: false,
+      isActive: false
     };
   },
   methods: {
@@ -65,7 +56,7 @@ export default {
     },
     navigateTo(path) {
       this.$router.push(path);
-    },
-  },
+    }
+  }
 };
 </script>
